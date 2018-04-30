@@ -1,5 +1,2 @@
-require "minneapolis_cli_app/version"
-
-module MinneapolisCliApp
-  # Your code goes here...
-end
+require_relative "./minneapolis_cli_app/version"
+require_relative './minneapolis_cli_app/cli'

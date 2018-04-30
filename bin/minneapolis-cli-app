@@ -1,3 +1,5 @@
 #!/usr/bin/env ruby
 
-puts "Hello World"
+require './lib/minneapolis_cli_app'
+
+MinneapolisCliApp::CLI.new.call
