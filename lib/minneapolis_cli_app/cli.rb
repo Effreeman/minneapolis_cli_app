@@ -2,19 +2,17 @@
 class MinneapolisCliApp::CLI
 
   def call
-    list_things_to_do
+    list_activity
     menu
     goodbye
   end
 
 # will be filled with scrapping info later but just setting up format for now
-  def list_things_to_do
+  def list_activity
     # how HERE DOC work - https://infinum.co/the-capsized-eight/multiline-strings-ruby-2-3-0-the-squiggly-heredoc
+
     puts "Things to do in Minneapolis MN:"
-    puts <<~DOC
-      1. lake calhoun
-      2. zoo
-    DOC
+    @activitities = MinneapolisCliApp::Activity.all
   end
 
   def menu
@@ -28,7 +26,7 @@ class MinneapolisCliApp::CLI
       when "2"
         puts "more info on activity 2..."
       when "list"
-        list_things_to_do
+        list_activity
       else
         puts "Not sure what you want, type list or exit"
       end
