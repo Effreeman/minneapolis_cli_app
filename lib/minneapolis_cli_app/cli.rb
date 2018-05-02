@@ -1,3 +1,4 @@
+
 # Our CLI controller
 class MinneapolisCliApp::CLI
 
