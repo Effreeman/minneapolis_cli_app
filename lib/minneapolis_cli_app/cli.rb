@@ -10,9 +10,11 @@ class MinneapolisCliApp::CLI
 # will be filled with scrapping info later but just setting up format for now
   def list_activity
     # how HERE DOC work - https://infinum.co/the-capsized-eight/multiline-strings-ruby-2-3-0-the-squiggly-heredoc
-
     puts "Things to do in Minneapolis MN:"
-    @activitities = MinneapolisCliApp::Activity.all
+    @activities = MinneapolisCliApp::Activity.all
+    @activities.each.with_index(1) do |deal, i|
+      puts "#{i}. #{activity.name} - #{activity.category} - #{activity.type}"
+    end
   end
 
   def menu
@@ -20,16 +22,16 @@ class MinneapolisCliApp::CLI
     while input != "exit"
       puts "Enter the number of the activity you'd like more info on or type list to see the activities again or type exit:"
       input = gets.strip.downcase
-      case input
-      when "1"
-        puts "more info on activity 1..."
-      when "2"
-        puts "more info on activity 2..."
-      when "list"
+
+      if input.to_i > 0
+        the_activity = @activities[input.to_i-1]
+        puts "#{i}. #{activity.name} - #{activity.category} - #{activity.type}"
+      elsif input == "list"
         list_activity
-      else
+      elsif
         puts "Not sure what you want, type list or exit"
       end
+
     end
   end
 

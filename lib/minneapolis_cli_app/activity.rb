@@ -2,10 +2,6 @@ class  MinneapolisCliApp::Activity
   attr_accessor :name, :category, :type, :url
   def self.all
     # I should return a bunch od instances of Activities
-    puts <<~DOC
-      1. top minneapolis bike trails and scenic routes - nature-outdoors - biking
-      2. mississippi river - nature-outdoors - rivers
-    DOC
 
     activity_1 = self.new
     activity_1.name = "top minneapolis bike trails and scenic routes"
