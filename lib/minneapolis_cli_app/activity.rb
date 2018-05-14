@@ -11,7 +11,7 @@ class  MinneapolisCliApp::Activity
 
     activities << self.scrape_vacationidea
 
-    # Go to minneapolis.org, find the activities
+    # Go to vacationidea.com, find the activities
     # find the properties
     # instantiate a deal
 
@@ -19,7 +19,7 @@ class  MinneapolisCliApp::Activity
     activities
   end
 
-  def self.scrape_minneapolis
+  def self.scrape_vacationidea 
     doc = Nokogiri::HTML(open("https://vacationidea.com"))
     binding.pry
   end
