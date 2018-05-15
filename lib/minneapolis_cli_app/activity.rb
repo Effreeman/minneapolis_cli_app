@@ -9,7 +9,7 @@ class  MinneapolisCliApp::Activity
   def self.scrape_activities
     activities = []
 
-    activities << self.scrape_vacationidea
+    activities << self.scrape_yelp
 
     # Go to vacationidea.com, find the activities
     # find the properties
@@ -19,8 +19,8 @@ class  MinneapolisCliApp::Activity
     activities
   end
 
-  def self.scrape_vacationidea 
-    doc = Nokogiri::HTML(open("https://vacationidea.com"))
+  def self.scrape_yelp
+    doc = Nokogiri::HTML(open("https://m.yelp.com/search?find_desc=Things+To+Do&find_loc=Minneapolis%2C+MN"))
     binding.pry
   end
 end
