@@ -14,7 +14,7 @@ class MinneapolisCliApp::CLI
     puts "Things to do in Minneapolis MN:"
     @activities = MinneapolisCliApp::Activity.all
     @activities.each.with_index(1) do |deal, i|
-      puts "#{i}. #{activity.name} - #{activity.category} - #{activity.type}"
+      puts "#{i}. #{activity.name} - #{activity.category} - #{activity.address}"
     end
   end
 
@@ -26,7 +26,7 @@ class MinneapolisCliApp::CLI
 
       if input.to_i > 0
         the_activity = @activities[input.to_i-1]
-        puts "#{i}. #{activity.name} - #{activity.category} - #{activity.type}"
+        puts "#{i}. #{activity.name} - #{activity.category} - #{activity.address}"
       elsif input == "list"
         list_activity
       elsif
