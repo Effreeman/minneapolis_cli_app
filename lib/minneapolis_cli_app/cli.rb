@@ -14,7 +14,7 @@ class MinneapolisCliApp::CLI
     puts "Dog friendly restaurants in Minneapolis MN:"
     @restaurants = MinneapolisCliApp::restaurants.all
     @restaurants.each.with_index(1) do |deal, i|
-      puts "#{i}. #{restaurant.name} - #{restaurant.review} - #{restaurant.location}"
+      puts "#{i}. #{restaurant.name} - #{restaurant.location} - #{restaurant.url}"
     end
   end
 
@@ -26,7 +26,7 @@ class MinneapolisCliApp::CLI
 
       if input.to_i > 0
         the_restaurant = @restaurants[input.to_i-1]
-        puts "#{i}. #{restaurant.name} - #{restaurant.review} - #{restaurant.location}"
+        puts "#{i}. #{restaurant.name} - #{restaurant.location} - #{restaurant.url}"
       elsif input == "list"
         list_restaurant
       elsif
