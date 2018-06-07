@@ -12,7 +12,7 @@ class MinneapolisCliApp::CLI
   def list_restaurants
     # how HERE DOC work - https://infinum.co/the-capsized-eight/multiline-strings-ruby-2-3-0-the-squiggly-heredoc
     puts "Dog friendly restaurants in Minneapolis MN:"
-    @restaurants = MinneapolisCliApp::restaurants.all
+    @restaurants = MinneapolisCliApp::Restaurant.all
     @restaurants.each.with_index(1) do |deal, i|
       puts "#{i}. #{restaurant.name} - #{restaurant.location} - #{restaurant.url}"
     end
@@ -34,9 +34,5 @@ class MinneapolisCliApp::CLI
       end
 
     end
-  end
-
-  def goodbye
-    puts " See you next time you are looking for more dog friendly restaurants in Minneapolis MN!"
   end
 end

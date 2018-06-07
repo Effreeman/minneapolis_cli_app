@@ -22,16 +22,16 @@ class  MinneapolisCliApp::Restaurant
   def self.scrape_sidewalkdog
     doc = Nokogiri::HTML(open("https://www.sidewalkdog.com/dog-friendly/wpbdp_category/food-and-drink/"))
 
-    restaurant_1 = self.new
-    restaurant_1.name = doc.search("#wpbdp-listing-33374 div.listing-title").text
-    restaurant_1.location = doc.search("#wpbdp-listing-33374 div.address-info").text
-    restaurant_1.url =
+    restaurant = self.new
+    restaurant_name_list = doc.search("div.listing-title a") #collection of restaurant names
+    restaurant_name_list.each do |i|
+      puts i
+    end 
 
-    restaurant_2 = self.new
-    restaurant_2.name =
-    restaurant_2.location =
-    restaurant_2.url =
-    
+
+
+
     binding.pry
   end
+
 end
