@@ -1,37 +1,28 @@
 class  MinneapolisCliApp::Restaurant
-  attr_accessor :name, :location, :url
+  attr_accessor :name, :cost, :rating, :location, :features
+
+  @@all = []
+
+  def initialize(name = nill, cost = nill, rating = nill, location = nill, features = nill)
+    @name = name
+    @cost = cost
+    @rating = rating
+    @location = location
+    @features = features
+    @@all << self
+  end
 
   def self.all
-    # scrape bringfido and then return restraunts based on that data
-    self.scrape_restaurants
+    @@all
   end
 
-  def self.scrape_restaurants
-    restaurants = []
-
-    restaurants << self.scrape_sidewalkdog
-
-    # Go to bringfido, find the restaurants
-    # find the properties
-    # instantiate a restaurant
-
-    #go to bringfido ...
-    restaurants
+  def self.find(id)
+    self.all[id-1]
   end
 
-  def self.scrape_sidewalkdog
-    doc = Nokogiri::HTML(open("https://www.sidewalkdog.com/dog-friendly/wpbdp_category/food-and-drink/"))
+  def self.find_by_cost(cost)
+    @@all.select {|restaurant| cost == restaurant.cost}
 
-    restaurant = self.new
-    restaurant_name_list = doc.search("div.listing-title a") #collection of restaurant names
-    restaurant_name_list.each do |i|
-      puts i
-    end 
-
-
-
-
-    binding.pry
+    
   end
-
 end

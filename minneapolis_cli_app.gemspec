@@ -8,7 +8,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["'Emma Freeman'"]
   spec.email         = ["'freemoe04@gmail.com'"]
 
-  spec.summary       = %q{Activities in Minneapolis MN}
+  spec.summary       = %q{Gluten free restaurants in Minneapolis MN}
   spec.homepage      = "https://github.com/Effreeman/minneapolis_cli_app.git"
   spec.license       = "MIT"
 
