@@ -9,9 +9,12 @@ class MinneapolisCliApp::CLI
 
   def list_restaurants
     # how HERE DOC work - https://infinum.co/the-capsized-eight/multiline-strings-ruby-2-3-0-the-squiggly-heredoc
-    puts "=" * 52
-    puts "Gluten free restaurants in Minneapolis MN:"
-    puts "=" * 52
+    puts "................................................"
+    puts ".                                              ."
+    puts ".  Gluten free restaurants in Minneapolis MN:  ."
+    puts ".                                              ."
+    puts "................................................"
+    puts ""
     MinneapolisCliApp::Restaurant.all.each.with_index(1) do |restaurant, i|
       puts "#{i}. #{restaurant.name}"
     end
@@ -19,11 +22,11 @@ class MinneapolisCliApp::CLI
 
   def print_restaurant(restaurant)
      puts ""
-     puts "Restaurant: #{restaurant.name}"
-     puts "Cost: #{restaurant.cost}"
-     puts "Rating: #{restaurant.rating}"
-     puts "Location: #{restaurant.location}"
-     puts "Features: #{restaurant.features}"
+     puts "Restaurant: ".colorize(:magenta) + "#{restaurant.name}"
+     puts "Cost: ".colorize(:magenta) + "#{restaurant.cost}"
+     puts "Rating: ".colorize(:magenta) + "#{restaurant.rating}"
+     puts "Location: ".colorize(:magenta) + "#{restaurant.location}"
+     puts "Features: ".colorize(:magenta) + "#{restaurant.features}"
      puts ""
    end
 

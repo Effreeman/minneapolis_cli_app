@@ -1,8 +1,8 @@
 # MinneapolisCliApp
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/minneapolis_cli_app`. To experiment with that code, run `bin/console` for an interactive prompt.
+Minneapolis CLI App scraper list the information of 50 different gluten free restaurants in minneapolis Minnesota.
 
-TODO: Delete this and the text above, and describe your gem
+In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file lib/minneapolis_cli_app. To experiment with that code, run bin/console for an interactive prompt.
 
 ## Installation
 
@@ -18,11 +18,11 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install minneapolis_cli_app
+    $ gem install minneapolis_cli_app 
 
 ## Usage
 
-TODO: Write usage instructions here
+./bin/minneapolis-cli-app #run the CLI
 
 ## Development
 
