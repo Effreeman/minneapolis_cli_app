@@ -21,13 +21,13 @@ class MinneapolisCliApp::CLI
   end
 
   def print_restaurant(restaurant)
-     puts ""
-     puts "Restaurant: ".colorize(:magenta) + "#{restaurant.name}"
-     puts "Cost: ".colorize(:magenta) + "#{restaurant.cost}"
-     puts "Rating: ".colorize(:magenta) + "#{restaurant.rating}"
-     puts "Location: ".colorize(:magenta) + "#{restaurant.location}"
-     puts "Features: ".colorize(:magenta) + "#{restaurant.features}"
-     puts ""
+     puts "..........................................................."
+     puts ". Restaurant: ".colorize(:magenta) + "#{restaurant.name}   "
+     puts ". Cost: ".colorize(:magenta) + "#{restaurant.cost}         "
+     puts ". Rating: ".colorize(:magenta) + "#{restaurant.rating}     "
+     puts ". Location: ".colorize(:magenta) + "#{restaurant.location} "
+     puts ". Features: ".colorize(:magenta) + "#{restaurant.features} "
+     puts "..........................................................."
    end
 
   def restaurant_info
